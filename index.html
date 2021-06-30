@@ -85,7 +85,7 @@
         
   
     <h1 itemprop="name">
-      <a class="p-name article-title" href="/2021/06/30/004-ssl443/">烦人的git clone 443问题</a>
+      <a class="p-name article-title" href="/2021/06/30/004-ssl443/">004-烦人的git clone 443问题</a>
     </h1>
   
 
@@ -94,13 +94,12 @@
     <div class="e-content article-entry" itemprop="articleBody">
       
         <h2 id="git-clone-下载时报错：OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443"><a href="#git-clone-下载时报错：OpenSSL-SSL-connect-Connection-was-reset-in-connection-to-github-com-443" class="headerlink" title="git clone 下载时报错：OpenSSL SSL_connect: Connection was reset in connection to github.com:443"></a>git clone 下载时报错：OpenSSL SSL_connect: Connection was reset in connection to github.com:443</h2><p>解决：git config –global http.sslVerify false</p>
-<hr>
 <p>end 2021.6.30</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/30/004-ssl443/" data-id="ckqj1yg090005f4veaixm9pt2" data-title="烦人的git clone 443问题" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/06/30/004-ssl443/" data-id="ckqj21myw0005mwve4oam31wm" data-title="004-烦人的git clone 443问题" class="article-share-link">分享</a>
       
       
       
@@ -161,13 +160,12 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">R</span> <span class="keyword">implements</span> <span class="title">Serializable</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">long</span> serialVersionUID = <span class="number">793034041048451317L</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> code;</span><br><span class="line">    <span class="keyword">private</span> String message;</span><br><span class="line">    <span class="keyword">private</span> Object data = <span class="keyword">null</span>;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCode</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> code;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setCode</span><span class="params">(<span class="keyword">int</span> code)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.code = code;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getMessage</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> message;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setMessage</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.message = message;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getData</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> data;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 放入响应枚举</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> R <span class="title">fillCode</span><span class="params">(CodeEnum codeEnum)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setCode(codeEnum.getCode());</span><br><span class="line">        <span class="keyword">this</span>.setMessage(codeEnum.getMessage());</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 放入响应码及信息</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> R <span class="title">fillCode</span><span class="params">(<span class="keyword">int</span> code, String message)</span></span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setCode(code);</span><br><span class="line">        <span class="keyword">this</span>.setMessage(message);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 处理成功，放入自定义业务数据集合</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> R <span class="title">fillData</span><span class="params">(Object data)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.setCode(CodeEnum.SUCCESS.getCode());</span><br><span class="line">        <span class="keyword">this</span>.setMessage(CodeEnum.SUCCESS.getMessage());</span><br><span class="line">        <span class="keyword">this</span>.data = data;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">this</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本篇文章从安全性、幂等性、数据规范等方面讨论了API设计规范。除此之外，一个好的API还少不了一个优秀的接口文档。接口文档的可读性非常重要，虽然很多程序员都不喜欢写文档，而且不喜欢别人不写文档。为了不增加程序员的压力，推荐使用swagger或其他接口管理工具，通过简单配置，就可以在开发中测试接口的连通性，上线后也可以生成离线文档用于管理API。</p>
-<hr>
 <h6 id="转载于-我是程序汪-公众号-侵删"><a href="#转载于-我是程序汪-公众号-侵删" class="headerlink" title="转载于 我是程序汪 公众号 侵删"></a>转载于 我是程序汪 公众号 侵删</h6><p>end 2021.6.30</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/30/003-API%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" data-id="ckqj1yg090004f4ve63anehgz" data-title="003-API接口该如何设计？" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/06/30/003-API%E6%8E%A5%E5%8F%A3%E8%AE%BE%E8%AE%A1%E8%A7%84%E8%8C%83/" data-id="ckqj21mys0004mwve8siihpmq" data-title="003-API接口该如何设计？" class="article-share-link">分享</a>
       
       
       
@@ -201,14 +199,13 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>想做一个图片云存储。。。</p>
-<hr>
+        <p>图片云存储</p>
 <p>未完待续</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/29/002-%E9%9A%8F%E7%AC%94/" data-id="ckqj1yg060002f4vebehwenrs" data-title="002-随笔" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/06/29/002-%E9%9A%8F%E7%AC%94/" data-id="ckqj21myr0003mwve8azxbyyp" data-title="002-随笔" class="article-share-link">分享</a>
       
       
       
@@ -245,13 +242,12 @@
         <h2 id="如何创建"><a href="#如何创建" class="headerlink" title="如何创建"></a>如何创建</h2><p>只要在hexo的目录：\blog\source_posts 下，直接创建一个md文件，然后通过Typora工具编写即可。</p>
 <h2 id="部署代码"><a href="#部署代码" class="headerlink" title="部署代码"></a>部署代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean					//清除缓存</span><br><span class="line">$ hexo g    					//重新构建</span><br><span class="line">$ hexo s    					//启动server检查</span><br><span class="line">$ hexo d    					//部署到git</span><br><span class="line">or</span><br><span class="line">$ hexo clean					//部署到git</span><br><span class="line">$ hexo deploy					//部署到git</span><br></pre></td></tr></table></figure>
 
-<hr>
 <p>end 2021.6.29</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/29/001-%E5%86%99blog&%E9%83%A8%E7%BD%B2%E7%9A%84%E6%96%B9%E5%BC%8F/" data-id="ckqj1yg010001f4ve3b2g0ulk" data-title="001-写blog&amp;部署的方式" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/06/29/001-%E5%86%99blog&%E9%83%A8%E7%BD%B2%E7%9A%84%E6%96%B9%E5%BC%8F/" data-id="ckqj21myq0002mwve67ho9qzm" data-title="001-写blog&amp;部署的方式" class="article-share-link">分享</a>
       
       
       
@@ -298,15 +294,12 @@
 
 
 
-
-
-<hr>
 <p>end 2021.6.29</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2021/06/28/000-%E7%AE%80%E4%BB%8B/" data-id="ckqj1yg080003f4vec1mmhbn5" data-title="000-简介" class="article-share-link">分享</a>
+      <a data-url="http://example.com/2021/06/28/000-%E7%AE%80%E4%BB%8B/" data-id="ckqj21myn0001mwve8q9tdnd4" data-title="000-简介" class="article-share-link">分享</a>
       
       
       
@@ -349,7 +342,7 @@
       <ul>
         
           <li>
-            <a href="/2021/06/30/004-ssl443/">烦人的git clone 443问题</a>
+            <a href="/2021/06/30/004-ssl443/">004-烦人的git clone 443问题</a>
           </li>
         
           <li>
